@@ -4,15 +4,17 @@ document.addEventListener("DOMContentLoaded", function() {
     const cityNames = ["London", "Paris", "Tokyo"];
     function openCity() {
         let i;
-        
+        const flag = this.classList.contains("active");
         for(i = 0; i < tabcontent.length; i++) {
             tabcontent[i].classList.add("hidden");
         }
         for(i = 0; i < tablinks.length; i++) {
             tablinks[i].classList.remove("active");
         }
-        document.getElementById(this.value).classList.remove("hidden");
-        this.classList.add("active");
+        if(!flag) {
+            document.getElementById(this.value).classList.toggle("hidden");
+            this.classList.add("active");
+        }
     }
     tablinks.forEach(element => element.addEventListener("click", openCity));
 });
