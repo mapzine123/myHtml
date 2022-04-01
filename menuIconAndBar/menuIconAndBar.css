@@ -1,0 +1,76 @@
+
+/* MENU-ICON */
+.menuIconBox {
+    display : inline-block;
+    cursor: pointer;
+}
+
+.menubar1, .menubar2, .menubar3 {
+    width: 35px;
+    height: 5px;
+    background-color: #333;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .menubar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .menubar2 {
+    opacity: 0;
+}
+
+.change .menubar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
+/* ICON_BAR_HORIZONTAL */
+/* .iconBar {
+    width :100%;
+    background-color: #555;
+    overflow: auto;
+}
+
+.iconBar a {
+    float: left;
+    width: 20%;
+    text-align:center;
+    padding: 12px 0;
+    transition: all 0.3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.iconBar a:hover {
+    background-color: #000;
+}
+
+.active {
+    background-color: #04AA6D;
+} */
+
+/* ICON_BAR_VERTICAL */
+.iconBar {
+    width: 90px;
+    background-color: #555;
+}
+
+.iconBar a {
+    display: block;
+    text-align: center;
+    padding: 16px;
+    transition: all .3s ease;
+    color: white;
+    font-size: 36px;
+}
+
+.iconBar a:hover {
+    background-color: #000;
+}
+
+.active {
+    background-color: #04AA6D;
+}
