@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let currentPage = event.target.innerText;
         let currentContent = document.querySelector("#" + currentPage);
         hidden(tabContent);
-        currentContent.classList.remove("hidden");
+        currentContent.cl10assList.remove("hidden");
     }
     tablinks.forEach(element => element.addEventListener("mouseover", openCity));
 
