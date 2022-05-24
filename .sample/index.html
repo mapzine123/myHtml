@@ -10,8 +10,27 @@
 </head>
 <body>
 <div class="bodyContainer">
-
+    <div id="display"></div>
 </div>
 <script src="script.js"></script>
+<script>
+    function getMyLocation() {
+        if(navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(myCallback);
+        } else {
+            alert("지오로케이션이 지원되지 않습니다.");
+        }
+
+        function myCallback(myPosition) {
+            let latitude = myPosition.coords.latitude;
+            let longitude = myPosition.coords.longitude;
+            let data = new Date(myPosition.timestamp);
+            let parsedDate = date.toUTCString();
+
+            document.getElementById("display").innerHTML = '위치: 일시 ' + parsedDate + '에 위도 ' + latitude + ' 경도 ' + longitude
+        }
+    }
+</script>
+
 </body>
 </html>
